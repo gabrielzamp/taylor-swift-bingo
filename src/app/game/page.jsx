@@ -80,8 +80,19 @@ const Game = () => {
   };
 
   const handleGuess = (bingoItem) => {
-    setGuesses({ ...guesses, [bingoItem]: selectedSongs[currentSongIndex] });
-    nextSongOrEndGame();
+    if (!guesses[bingoItem] && !gameOver) {
+      const newGuesses = {
+        ...guesses,
+        [bingoItem]: selectedSongs[currentSongIndex],
+      };
+      setGuesses(newGuesses);
+
+      if (Object.keys(newGuesses).length === selectedBingoItems.length) {
+        setGameOver(true);
+      } else {
+        nextSongOrEndGame();
+      }
+    }
   };
 
   const handleSkip = () => {
