@@ -546,8 +546,7 @@ const data = [
       "ivy",
       "long story short",
       "marjorie",
-      "no body",
-      "no crime",
+      "no body, no crime",
       "'tis the damn season",
       "tolerate it",
       "willow",
@@ -622,7 +621,7 @@ const data = [
   {
     bingoItem: "HAIM",
     type: "Featuring song",
-    listOfMusics: ["No Body No Crime", "Gasoline"],
+    listOfMusics: ["no body, no crime", "Gasoline"],
   },
   {
     bingoItem: "The Chicks (formerly known as The Dixie Chicks)",
@@ -713,7 +712,7 @@ const data = [
   {
     bingoItem: "Surprise song on The Era's Tour",
     type: "Misc",
-    listOfMusics: ["The Moment I Knew", "Dress", "So It Goes"],
+    listOfMusics: ["The Moment I Knew", "Dress", "So It Goes...", "Maroon"],
   },
   {
     bingoItem: "2:00 AM",
@@ -750,8 +749,6 @@ const data = [
       "Holy Ground",
       "Come back... Be here",
       "The Lucky One",
-      "hoax",
-      "Coney Island",
     ],
   },
   {
