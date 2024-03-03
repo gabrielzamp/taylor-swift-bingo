@@ -2,21 +2,21 @@
 
 import React, { useState, useEffect } from "react";
 import data from "./outputData"; // Certifique-se de que o caminho esteja correto
-import { Bebas_Neue, Inter } from 'next/font/google'
+import { Bebas_Neue, Inter } from "next/font/google";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const bebas = Bebas_Neue({
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: "400",
-    style: "normal",
-    variable: "--font-inter",
-    display: 'swap',
-})
+  style: "normal",
+  variable: "--font-inter",
+  display: "swap",
+});
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -100,71 +100,79 @@ const Game = () => {
   };
 
   return (
-    <div className={`p-4 flex flex-col items-center bg-[#1E0E30] ${bebas.className}`}>
-      <h1 className="mb-4 text-3xl font-bold text-center">Taylor Swift Bingo Game</h1>
-      {!gameOver ? (
-        <>
-        <div className="flex items-center gap-3 mb-5">
-          <p className="mb-2">
-            Current Song: {selectedSongs[currentSongIndex]} (
-            {currentSongIndex + 1} / {selectedSongs.length})
-          </p>
-          <button
-            className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
-            onClick={handleSkip}
-            >
-            Skip
-          </button>
-            </div>
-          <div className="grid items-center grid-cols-3 gap-3">
-            {selectedBingoItems.map((item) => (
-              <div key={item.bingoItem}>
+    <div className="bg-[#1E0E30]">
+      <div
+        className={`p-4 flex flex-col items-center bg-[#1E0E30] ${bebas.className}`}
+      >
+        <h1 className="mb-4 text-3xl font-bold text-center">
+          Taylor Swift Bingo Game
+        </h1>
+        {!gameOver ? (
+          <>
+            <div className="flex items-center gap-3 mb-5">
+              <p className="text-xl ">
+                Current Song: {selectedSongs[currentSongIndex]} (
+                {currentSongIndex + 1} / {selectedSongs.length})
+              </p>
               <button
-                className={`tracking-wider text-xl h-36 w-36 uppercase font-bold px-2 py-2 ${
-                  guesses[item.bingoItem] ? "bg-[#ceff27] text-[#1E0E30]" : "bg-blue-400 text-white"
-                }  rounded`}
-                onClick={() => handleGuess(item.bingoItem)}
-                disabled={!!guesses[item.bingoItem]}
+                className="px-4 py-1 text-xl text-white bg-blue-500 rounded hover:bg-blue-700"
+                onClick={handleSkip}
               >
-                {item.bingoItem}
+                Skip
               </button>
-              </div>
-            ))}
-          </div>
-        </>
-      ) : (
-        <>
-          <h2>Game Over! Here are your results:</h2>
-          <ul>
-            {selectedBingoItems.map((item) => (
-              <li key={item.bingoItem}>
-                {item.bingoItem}:{" "}
-                {guesses[item.bingoItem]
-                  ? guesses[item.bingoItem] +
-                    " - " +
-                    (item.listOfMusics.includes(guesses[item.bingoItem])
-                      ? "Correct"
-                      : "Incorrect")
-                  : "Not Selected"}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-4">
-            <h3 className="font-bold">All Selected Songs:</h3>
+            </div>
+            <div className="grid items-center grid-cols-3 gap-1 md:grid-cols-3 md:gap-3">
+              {selectedBingoItems.map((item) => (
+                <div className="" key={item.bingoItem}>
+                  <button
+                    className={`h-[90px] w-[90px] tracking-wider text-lg uppercase font-bold px-2 py-2 ${
+                      guesses[item.bingoItem]
+                        ? "bg-[#ceff27] text-[#1E0E30]"
+                        : "bg-blue-400 text-white"
+                    }  rounded`}
+                    onClick={() => handleGuess(item.bingoItem)}
+                    disabled={!!guesses[item.bingoItem]}
+                  >
+                    {item.bingoItem}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <h2>Game Over! Here are your results:</h2>
             <ul>
-              {Object.values(guesses).map((song, index) => (
-                <li key={index}>{song}</li>
+              {selectedBingoItems.map((item) => (
+                <li key={item.bingoItem}>
+                  {item.bingoItem}:{" "}
+                  {guesses[item.bingoItem]
+                    ? guesses[item.bingoItem] +
+                      " - " +
+                      (item.listOfMusics.includes(guesses[item.bingoItem])
+                        ? "Correct"
+                        : "Incorrect")
+                    : "Not Selected"}
+                </li>
               ))}
             </ul>
-          </div>
-          <button
-            className="px-4 py-2 mt-4 text-white bg-green-500 rounded hover:bg-green-700"
-            onClick={initializeGame}
-          >
-            Reset Game
-          </button>
-        </>
-      )}
+            <div className="mt-4">
+              <h3 className="font-bold">All Selected Songs:</h3>
+              <ul>
+                {Object.values(guesses).map((song, index) => (
+                  <li key={index}>{song}</li>
+                ))}
+              </ul>
+            </div>
+            <button
+              className="px-4 py-2 mt-4 text-white bg-green-500 rounded hover:bg-green-700"
+              onClick={initializeGame}
+            >
+              Reset Game
+            </button>
+          </>
+        )}
+      </div>
     </div>
   );
 };

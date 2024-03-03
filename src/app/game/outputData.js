@@ -1,6 +1,6 @@
 const data = [
   {
-    bingoItem: "Taylor Swift (2006)",
+    bingoItem: "Taylor Swift",
     type: "Album",
     listOfMusics: [
       "Tim McGraw",
@@ -12,19 +12,19 @@ const data = [
       "Should’ve Said No",
       "Mary’s Song (Oh My My My)",
       "Our Song",
-      "I’m Only Me When I’m With You (2008",
+      "I’m Only Me When I’m With You",
       "Deluxe)",
-      "Invisible (2008",
+      "Invisible",
       "Deluxe)",
-      "A Perfectly Good Heart (2008",
+      "A Perfectly Good Heart",
       "Deluxe)",
-      "Teardrops on My Guitar Pop Version (2008)",
+      "Teardrops on My Guitar Pop Version",
       "Taylor Swift’s first phone call with Tim McGraw (Deluxe)",
       "I Heart ? (Best Buy Digital Download)",
     ],
   },
   {
-    bingoItem: "Fearless (2008)",
+    bingoItem: "Fearless",
     type: "Album",
     listOfMusics: [
       "Breathe",
@@ -55,7 +55,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Speak Now (2010)",
+    bingoItem: "Speak Now",
     type: "Album",
     listOfMusics: [
       "Back To December",
@@ -83,7 +83,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Red (2012)",
+    bingoItem: "Red",
     type: "Album",
     listOfMusics: [
       "22",
@@ -118,7 +118,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "1989 (2014)",
+    bingoItem: "1989",
     type: "Album",
     listOfMusics: [
       "All You Had To Do Was Stay",
@@ -147,7 +147,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Reputation (2017)",
+    bingoItem: "Reputation",
     type: "Album",
     listOfMusics: [
       "Call It What You Want",
@@ -167,7 +167,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Lover (2019)",
+    bingoItem: "Lover",
     type: "Album",
     listOfMusics: [
       "Afterglow",
@@ -191,7 +191,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Folklore (2020)",
+    bingoItem: "Folklore",
     type: "Album",
     listOfMusics: [
       "august",
@@ -213,7 +213,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Evermore (2020)",
+    bingoItem: "Evermore",
     type: "Album",
     listOfMusics: [
       "champagne problems",
@@ -234,7 +234,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Midnights (2022)",
+    bingoItem: "Midnights",
     type: "Album",
     listOfMusics: [
       "Anti-Hero",
