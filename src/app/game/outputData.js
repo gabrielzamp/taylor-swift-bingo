@@ -332,7 +332,7 @@ const data = [
       "I’m Only Me When I’m With You",
       "Invisible",
       "A Perfectly Good Heart",
-      "Teardrops on My Guitar Pop Version",
+      "Teardrops on My Guitar",
       "Taylor Swift’s first phone call with Tim McGraw",
       "I Heart ?",
     ],
