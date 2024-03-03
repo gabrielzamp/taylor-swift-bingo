@@ -111,27 +111,31 @@ const Game = () => {
   };
 
   return (
-    <div className="bg-[#1E0E30]">
+    <div className="bg-[#1E0E30] w-full">
       <div
-        className={`p-4 flex flex-col items-center bg-[#1E0E30] ${bebas.className}`}
+        className={`p-4 flex flex-col items-center bg-[#1E0E30] ${bebas.className} w-full`}
       >
         <h1 className="mb-4 text-3xl font-bold text-center">
           Taylor Swift Bingo Game
         </h1>
         {!gameOver ? (
           <>
-            <div className="flex items-center gap-3 mb-5">
-              <p className="text-xl ">
-                Current Song: {selectedSongs[currentSongIndex]} (
-                {currentSongIndex + 1} / {selectedSongs.length})
-              </p>
-              <button
-                className="px-4 py-1 text-xl text-white bg-blue-500 rounded hover:bg-blue-700"
-                onClick={handleSkip}
-              >
-                Skip
-              </button>
+            <div className="flex items-center justify-between w-full gap-3 px-4 mb-5 ">
+              <div>
+                <p className="text-sm">Current song:</p>
+                <p className="text-4xl">{selectedSongs[currentSongIndex]}</p>
+              </div>
+              <div>
+                <button
+                  className="w-full px-4 py-1 mb-1 text-xl text-white bg-blue-500 rounded hover:bg-blue-700"
+                  onClick={handleSkip}
+                >
+                  Skip
+                </button>
+                <p>({selectedSongs.length - currentSongIndex} musics left)</p>
+              </div>
             </div>
+
             <div className="grid items-center grid-cols-3 gap-1 md:grid-cols-3 md:gap-3">
               {selectedBingoItems.map((item) => (
                 <div className="" key={item.bingoItem}>

@@ -671,7 +671,7 @@ const data = [
   },
 
   {
-    bingoItem: "Reference to her family and friends",
+    bingoItem: "Family & friends",
     type: "Misc",
     listOfMusics: ["Fifteen", "The Best Day", "22"],
   },
@@ -718,7 +718,7 @@ const data = [
     ],
   },
   {
-    bingoItem: "Mention of a specific time",
+    bingoItem: "Specific time",
     type: "Songs about...",
     listOfMusics: ["Out of the Woods", "Treacherous", "Wildest Dreams"],
   },
