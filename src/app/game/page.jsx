@@ -174,15 +174,15 @@ const Game = () => {
             <h2 className="items-center mt-2 mb-3 text-5xl text-white">
               Game Over!
             </h2>
-            <div className="flex flex-col items-center justify-center px-5 py-2 border border-white rounded-md">
-              <p className="mt-3 text-xl">Here are your results:</p>
+            <div className="flex flex-col items-center justify-center px-5 py-4 border border-white rounded-md">
+              <p className="text-xl ">Here are your results:</p>
               <p className="self-center mt-2 text-3xl text-center">
                 Points: {calculateHits()} of {selectedBingoItems.length} Points
               </p>
             </div>
-            <ol>
+            <ol className="px-2 py-4 text-center">
               {selectedBingoItems.map((item) => (
-                <li key={item.bingoItem} className="text-lg">
+                <li key={item.bingoItem} className="mb-1 text-lg">
                   {item.bingoItem}:{" "}
                   {guesses[item.bingoItem]
                     ? guesses[item.bingoItem] +
