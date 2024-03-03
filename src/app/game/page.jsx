@@ -110,12 +110,24 @@ const Game = () => {
     }
   };
 
+  const calculateHits = () => {
+    return selectedBingoItems.reduce((acc, item) => {
+      if (
+        guesses[item.bingoItem] &&
+        item.listOfMusics.includes(guesses[item.bingoItem])
+      ) {
+        return acc + 1;
+      }
+      return acc;
+    }, 0);
+  };
+
   return (
-    <div className="bg-[#381a5a] w-full">
+    <div className="bg-[#381a5a] w-full text-white">
       <div
         className={`p-4 flex flex-col items-center bg-[#381a5a] ${bebas.className} w-full`}
       >
-        <h1 className="py-3 mb-4 text-5xl font-bold text-center">
+        <h1 className="py-3 mb-4 text-5xl font-bold text-center text-white">
           Taylor Swift Bingo Game
         </h1>
         {!gameOver ? (
@@ -138,9 +150,12 @@ const Game = () => {
 
             <div className="grid items-center grid-cols-3 gap-1 md:grid-cols-3 md:gap-3">
               {selectedBingoItems.map((item) => (
-                <div className="" key={item.bingoItem}>
+                <div
+                  className="w-full h-full aspect-1 aspect-square"
+                  key={item.bingoItem}
+                >
                   <button
-                    className={`h-[90px] w-[90px] tracking-wider text-lg uppercase font-bold px-2 py-2 ${
+                    className={`w-full h-full aspect-square tracking-wider text-lg uppercase font-bold px-2 py-2 ${
                       guesses[item.bingoItem]
                         ? "bg-[#ceff27] text-[#1E0E30]"
                         : "bg-blue-400 text-white"
@@ -156,10 +171,18 @@ const Game = () => {
           </>
         ) : (
           <>
-            <h2 className="mb-4 text-xl">Game Over! Here are your results:</h2>
+            <h2 className="items-center mt-2 mb-3 text-5xl text-white">
+              Game Over!
+            </h2>
+            <div className="flex flex-col items-center justify-center px-5 py-2 border border-white rounded-md">
+              <p className="mt-3 text-xl">Here are your results:</p>
+              <p className="self-center mt-2 text-3xl text-center">
+                Points: {calculateHits()} of {selectedBingoItems.length} Points
+              </p>
+            </div>
             <ol>
               {selectedBingoItems.map((item) => (
-                <li key={item.bingoItem}>
+                <li key={item.bingoItem} className="text-lg">
                   {item.bingoItem}:{" "}
                   {guesses[item.bingoItem]
                     ? guesses[item.bingoItem] +
@@ -171,14 +194,6 @@ const Game = () => {
                 </li>
               ))}
             </ol>
-            <div className="mt-4">
-              <h3 className="font-bold">All Selected Songs:</h3>
-              <ol>
-                {Object.values(guesses).map((song, index) => (
-                  <li key={index}>{song}</li>
-                ))}
-              </ol>
-            </div>
             <button
               className="px-4 py-2 mt-4 text-white bg-green-500 rounded hover:bg-green-700"
               onClick={initializeGame}
