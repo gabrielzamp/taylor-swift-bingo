@@ -624,7 +624,7 @@ const data = [
     listOfMusics: ["no body, no crime", "Gasoline"],
   },
   {
-    bingoItem: "The Chicks (formerly known as The Dixie Chicks)",
+    bingoItem: "The Chicks",
     type: "Featuring song",
     listOfMusics: ["Soon You`ll Get Better"],
   },
@@ -720,7 +720,7 @@ const data = [
     listOfMusics: ["Breathe", "I Wish You Would"],
   },
   {
-    bingoItem: "A track from her debut album",
+    bingoItem: "Debut album",
     type: "Misc",
     listOfMusics: [
       "Tim McGraw",

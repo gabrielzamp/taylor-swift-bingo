@@ -141,8 +141,8 @@ const Game = () => {
           </>
         ) : (
           <>
-            <h2>Game Over! Here are your results:</h2>
-            <ul>
+            <h2 className="mb-4 text-xl">Game Over! Here are your results:</h2>
+            <ol>
               {selectedBingoItems.map((item) => (
                 <li key={item.bingoItem}>
                   {item.bingoItem}:{" "}
@@ -155,14 +155,14 @@ const Game = () => {
                     : "Not Selected"}
                 </li>
               ))}
-            </ul>
+            </ol>
             <div className="mt-4">
               <h3 className="font-bold">All Selected Songs:</h3>
-              <ul>
+              <ol>
                 {Object.values(guesses).map((song, index) => (
                   <li key={index}>{song}</li>
                 ))}
-              </ul>
+              </ol>
             </div>
             <button
               className="px-4 py-2 mt-4 text-white bg-green-500 rounded hover:bg-green-700"
