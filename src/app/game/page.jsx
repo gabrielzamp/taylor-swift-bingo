@@ -123,7 +123,7 @@ const Game = () => {
             <div className="flex items-center justify-between w-full max-w-72 gap-3 px-4 py-3 mb-5 border border-white rounded-md bg-[#381a5a] ">
               <div>
                 <p className="text-sm">Current song:</p>
-                <p className="text-4xl">{selectedSongs[currentSongIndex]}</p>
+                <p className="text-2xl">{selectedSongs[currentSongIndex]}</p>
               </div>
               <div>
                 <button
