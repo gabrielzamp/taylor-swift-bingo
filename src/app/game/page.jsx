@@ -111,16 +111,16 @@ const Game = () => {
   };
 
   return (
-    <div className="bg-[#1E0E30] w-full">
+    <div className="bg-[#381a5a] w-full">
       <div
-        className={`p-4 flex flex-col items-center bg-[#1E0E30] ${bebas.className} w-full`}
+        className={`p-4 flex flex-col items-center bg-[#381a5a] ${bebas.className} w-full`}
       >
-        <h1 className="mb-4 text-3xl font-bold text-center">
+        <h1 className="py-3 mb-4 text-5xl font-bold text-center">
           Taylor Swift Bingo Game
         </h1>
         {!gameOver ? (
           <>
-            <div className="flex items-center justify-between w-full gap-3 px-4 mb-5 ">
+            <div className="flex items-center justify-between w-full max-w-72 gap-3 px-4 py-3 mb-5 border border-white rounded-md bg-[#381a5a] ">
               <div>
                 <p className="text-sm">Current song:</p>
                 <p className="text-4xl">{selectedSongs[currentSongIndex]}</p>
